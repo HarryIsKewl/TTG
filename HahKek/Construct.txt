@@ -1,0 +1,47 @@
+TEMPLATE:
+Server:
+Port 2452
+Ip get Server client IP
+ID get Verified Server ID
+################################################
+
+
+LOGIN ID 12355643
+PLAY ID EU 13421432
+
+PLAY EU:
+Port 2452
+Ip get Server client IP
+ID get Verified Server ID
+Check
+
+REDIR Server:
+Port 42452
+MySql DB: If Player is login, Send Client Message Do you want to play on the EU or US server?
+if Client Response is eu then send to 1342143@2
+if player isnt login, send to Login server 1235564@3
+
+
+Ip get Server client IP
+ID get Verified Server ID
+
+Login Server:
+Port 32452
+Ip get Server client IP
+ID get Verified Server ID
+Get PASS
+Get User
+MySql DB Check for Pass and User match.
+if Pass == User
+    Play EU
+else
+    Player Return to loadScreen(Packet).
+
+
+
+################################################
+
+Client Plan
+    Load Screen > Options > Options Menu
+                  Play > Send to REDIR Server
+                  Help > Send message Check Website
